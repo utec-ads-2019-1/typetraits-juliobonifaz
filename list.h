@@ -17,71 +17,27 @@ class List {
         List() : head(nullptr) {};
 
         bool find(T search, Node<T> **&pointer) {
-            pointer = &head;
-            while (*pointer && cmp((*pointer)->data, search)) {
-                if ((*pointer)->data == search) {
-                    return true;
-                }
-                pointer = &((*pointer)->next);
-            }
-
-            return false;
+            // TODO
         }
              
         bool insert(T data) {
-            Node<T> **temp;
-            if (find(data, temp)) {
-                return false;
-            }
-                  
-            Node<T> *node = new Node<T>(data);
-            node->next = *temp;
-            *temp = node;
-            return true;
+            // TODO
         }
              
         bool remove(T item) {
-            Node<T> **temp;
-                  
-            if (!find(item, temp)) {
-                return false;
-            }
-
-            Node<T> *node = *temp;
-            *temp = (*temp)->next;
-            delete node;
-            return true;
+            // TODO
         }  
              
         int size() {
-            int count = 0;
-
-            Node<T> *next = head;
-            while (next) {
-                next = next->next;
-                count++;
-            }
-
-            return count;
+            // TODO
         }
 
         T operator[](int index) {
-            Node<T>* next = this->head;
-            for (int i = 0; i < index; i++) {
-                if (!next) {
-                    throw out_of_range("Position out of bounds");
-                }
-
-                next = next->next;
-            }
-
-            return next->data;
+            // TODO
         }
 
         ~List() {
-            if (head) {
-                head->killSelf();
-            } 
+            // TODO
         }         
 };
 
